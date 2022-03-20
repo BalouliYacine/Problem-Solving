@@ -2,10 +2,11 @@ console.log("------- ON --------");
 
 function moveZeros(arr) {
     let count = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === 0) count.push(0)
-    }
-    return arr.filter(n => n !== 0).concat(arr.filter(n => n === 0))
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === 0) count.push(0)
+    // }
+    return arr.filter(n => n !== 0)
+        .concat(arr.filter(n => n === 0))
 
     // OR just this one line code
     // return arr.filter(n => n !== 0).concat(arr.filter(n => n === 0))
