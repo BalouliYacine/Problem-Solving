@@ -4,39 +4,42 @@ function countPatternsFrom(firstPoint, length) {
     let ar = [
         {
             valeu: "A",
-            visted: false,
             Neighbors:
-                ["B", "C", "D", "E", "F", "G", "H", "I"]
+                ["B", "D", "E"]
         },
         {
             valeu: "B",
-            visted: false,
             Neighbors:
-                ["A", "C", "D", "E", "F", "G", "H", "I"]
+                ["A", "D", "E"]
         },
         {
             valeu: "D",
-            visted: false,
             Neighbors:
-                ["B", "C", "A", "E", "F", "G", "H", "I"]
+                ["B", "A", "E"]
         },
         {
             valeu: "E",
-            visted: false,
             Neighbors:
-                ["B", "C", "D", "A", "F", "G", "H", "I"]
+                ["B", "D", "A"]
         }
     ]
+    let list = []
 
     function Count(Element) {
-        Element.visted = true
-        console.log(Element.valeu + ' is visted: ' + Element.visted);
-        console.log('');
-        // 
         Element.Neighbors.forEach(e2 => {
             ar.find((p) => {
-                if (p.valeu === e2 && p.visted === false) {
-                    Count(p)
+                if (p.valeu === e2) {
+                    if (length === 1) return list = [firstPoint]
+                    //
+                    list.push([firstPoint,
+                        p.valeu,
+                        ...[...p.Neighbors.filter(e => e !== firstPoint)]].splice(0, length))
+                    // 
+                    length !== 2 &&
+                        list.push([firstPoint,
+                            p.valeu,
+                            ...[...p.Neighbors.filter(e => e !== firstPoint)
+                                .reverse()]].splice(0, length))
                 }
             })
         })
@@ -45,32 +48,31 @@ function countPatternsFrom(firstPoint, length) {
     function Finder(ar) {
         ar.find((p) => {
             if (p.valeu === firstPoint) {
+                console.log('Start is: ' + firstPoint);
                 Count(p)
+                console.log(list);
             }
         });
     }
 
-
-    // let ar = [
-    //     ["A", "B", "C"],
-    //     ["D", "E", "F"],
-    //     ["G", "H", "I"],
-    // ]
-
-    // for (let i = 0; i < ar.length; i++) {
-    //     if (ar[i].find(e => e === firstPoint)) {
-    //         console.log("Found: " + firstPoint + " and length is: " + length);
-
-    //     };
-    // }
-
     return Finder(ar)
 }
 
+console.log(countPatternsFrom("B", 4));
 
-console.log(countPatternsFrom("B", 5));
 
+// let ar = [
+//     ["A", "B", "C"],
+//     ["D", "E", "F"],
+//     ["G", "H", "I"],
+// ]
 
+// for (let i = 0; i < ar.length; i++) {
+//     if (ar[i].find(e => e === firstPoint)) {
+//         console.log("Found: " + firstPoint + " and length is: " + length);
+
+//     };
+// }
 
 
 

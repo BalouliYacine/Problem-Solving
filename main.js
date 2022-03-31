@@ -1,6 +1,19 @@
 console.log("------- ON --------");
 
+  
 console.log("------- OFF --------");
+
+// function palindrome(str) {
+// let t = str.replace(/[^a-z0-9]/gi, '').toLowerCase()
+// console.log(t);
+//     if(t.split('').join('')===t.split('').reverse().join('')) return true
+//     else return false
+//   }
+  
+// console.log(
+//   palindrome("e/*y'e")
+// );
+
 
 // function alphanumeric(string) {
     //     //your code here
