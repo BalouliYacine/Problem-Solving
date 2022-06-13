@@ -1,6 +1,13 @@
 console.log("------- ON --------");
 
-  
+let Data = [1, 2, 3, 44, 44, 3, 1]
+let setData = new Set(Data)
+
+console.log(Data);
+console.log('---------');
+console.log(setData);
+
+
 console.log("------- OFF --------");
 
 // function palindrome(str) {
@@ -9,25 +16,23 @@ console.log("------- OFF --------");
 //     if(t.split('').join('')===t.split('').reverse().join('')) return true
 //     else return false
 //   }
-  
+
 // console.log(
 //   palindrome("e/*y'e")
 // );
 
-
 // function alphanumeric(string) {
-    //     //your code here
-    //     // if (string === "") return false
-    //     // else if (string.split('').includes(" ")) return false
-    //     // else if (string.split('').includes('_')) return false
-    //     // else if (string.split('').includes('!')) return false
-    
-    //     // else return true
-    //     return /^[0-9a-z]+$/i.test(string)
-    // }
-    
-    // console.log(alphanumeric(" "));
+//     //your code here
+//     // if (string === "") return false
+//     // else if (string.split('').includes(" ")) return false
+//     // else if (string.split('').includes('_')) return false
+//     // else if (string.split('').includes('!')) return false
 
+//     // else return true
+//     return /^[0-9a-z]+$/i.test(string)
+// }
+
+// console.log(alphanumeric(" "));
 
 // function PaginationHelper(collection, itemsPerPage) {
 //     this.itemC = collection.length
@@ -74,7 +79,6 @@ console.log("------- OFF --------");
 // var helper =
 //     new PaginationHelper(['a', 'b', 'c', 'd', 'e', 'f'], 4);
 
-
 // function solution(input, markers) {
 //     let allNpt = input.split("\n")
 //     let newnpt = []
@@ -101,7 +105,6 @@ console.log("------- OFF --------");
 //     return newnpt.join("\n")
 // };
 
-
 // console.log(solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"])
 // );
 
@@ -126,11 +129,6 @@ console.log("------- OFF --------");
 // }
 
 // console.log(sqInRect(9, 10));
-
-
-
-
-
 
 // function inArray(array1, array2) {
 //     let r = []
@@ -191,7 +189,6 @@ console.log("------- OFF --------");
 // }
 
 // console.log(validParentheses("()"));
-
 
 // Equal Sides Of An Array
 // function findEvenIndex(arr) {
@@ -364,4 +361,3 @@ console.log("------- OFF --------");
 //     document.getElementById("demo").innerHTML = "EXPIRED";
 //   }
 // }, 1000);
-
