@@ -1,14 +1,30 @@
 console.log("------- ON --------");
 
-let Data = [1, 2, 3, 44, 44, 3, 1]
-let setData = new Set(Data)
-
-console.log(Data);
-console.log('---------');
-console.log(setData);
 
 
 console.log("------- OFF --------");
+
+
+// function alphabetPosition(text) {
+//     let alphabets = ["A", "B", "C", "D", "E", "F", "G", "H",
+//         "I", "J", "K", "L", "M", "N", "O", "P", "Q",
+//         "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+//     let nums = []
+
+//     for (let i = 0; i < text.toUpperCase().split('').length; i++) {
+//         for (let j = 0; j < alphabets.length; j++) {
+//             if (alphabets[j] == text.toUpperCase().split('')[i]) {
+//                 nums.push(j + 1)
+//             }
+//         }
+//     }
+
+//     return nums.join(" ");
+// }
+
+// console.log(alphabetPosition('atj'));
+
+
 
 // function palindrome(str) {
 // let t = str.replace(/[^a-z0-9]/gi, '').toLowerCase()
